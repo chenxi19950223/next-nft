@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, #4dc0b5, #3490dc);
-}
+/*.bg-gradient-to-r {*/
+/*  background-image: linear-gradient(to right, #4dc0b5, #3490dc);*/
+/*}*/
 
 .text-gradient {
   background-color: #fff;
