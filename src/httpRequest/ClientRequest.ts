@@ -1,14 +1,15 @@
 import request from "@/utils/request";
 import HTTPURL from "@/httpRequest/HTTPURL";
+import {AxiosPromise} from "axios";
 
 // 保存文件到链上
-export function saveIpfs(form: FormData) {
+export function saveIpfs(form: FormData): AxiosPromise<any> {
     return request({
         url: HTTPURL.pinata,
         method: 'post',
         headers: {
-            'pinata_api_key': `2dc9de284e2cc3e588bc`,
-            'pinata_secret_api_key': `90d7778c1e9e3929bdd3547031110997a04f9f451e98e4b8989d0f051bddebfb`,
+            'pinata_api_key': process.env.PINATA_API_KEY,
+            'pinata_secret_api_key': process.env.PINATA_API_SECRET_KEY,
             // "Content-Type": "multipart/form-data"
         },
         data: form
